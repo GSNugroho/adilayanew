@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="../../logo_new.png" type="image/x-icon">
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title> SISTEM INFORMASI </title>
+	<!-- Untuk Font-->
+	<link href="../../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
+
+	<!-- Template e -->
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/sb-admin-2.min.css"/>
+    <link href="../../../assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+<style>
+  input[type=number] {
+  -moz-appearance: textfield;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+</style>
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Isi -->
+		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('dashboard');?>">
+        <div class="sidebar-brand-icon rotate-n-15">
+        <i class="fas fa-warehouse"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Admin Marketing</div>
+		</a>
+		
+		<hr class="sidebar-divider my-0">
+
+		<!-- Nav Item - Dashboard -->
+		<li class="nav-item ">
+        <a class="nav-link" href="<?php echo base_url('dashboard');?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          	<span>Dashboard</span></a>
+		</li>
+		
+		<hr class="sidebar-divider">
+		<div class="sidebar-heading">
+        Mitra
+		</div>
+		<!-- Barang -->
+		<li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('monitor')?>">
+          <i class="fas fa-boxes"></i>
+          <span>Data Mitra</span></a>
+		</li>
+		
+		<!-- Mutasi -->
+		<!-- <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('mutasi')?>">
+          <i class="fas fa-dolly"></i>
+          <span>Mutasi</span></a>
+      	</li> -->
+
+		<!-- <hr class="sidebar-divider">
+		<div class="sidebar-heading">
+		Pemeliharaan
+		</div> -->
+			<!-- Perawatan -->
+			<!-- <li class="nav-item">
+			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+			<i class="fas fa-broom"></i>
+			<span>Perawatan</span>
+			</a>
+			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<h6 class="collapse-header">Perawatan Inventaris:</h6>
+				<a class="collapse-item" href="<?php echo base_url('jadwal')?>">Jadwal Perawatan</a>
+        <a class="collapse-item" href="<?php echo base_url('perawatan')?>">Daftar Perawatan</a>
+        <a class="collapse-item" href="<?php echo base_url('report/riwayat_perawatan')?>">Riwayat Perawatan</a>
+			</div>
+			</div>
+		</li> -->
+	  
+		<!-- Perbaikan -->
+
+    <!-- <li class="nav-item">
+			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true" aria-controls="collapsePage">
+			<i class="fas fa-wrench"></i>
+			<span>Perbaikan</span>
+			</a>
+			<div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<h6 class="collapse-header">Perbaikan Inventaris:</h6>
+				<a class="collapse-item" href="<?php echo base_url('perbaikan')?>">Daftar Perbaikan</a>
+        <a class="collapse-item" href="<?php echo base_url('report/riwayat_perbaikan')?>">Riwayat Perbaikan</a>
+			</div>
+			</div>
+		</li> -->
+
+    <!-- Komponen -->
+
+    	<!-- <li class="nav-item">
+      <a class="nav-link" href="<?php //echo base_url('komponen')?>">
+        <i class="fas fa-memory"></i>
+        <span>Komponen</span></a>
+      </li> -->
+
+	  	<!-- <hr class="sidebar-divider">
+	  	<div class="sidebar-heading">
+		Laporan
+    </div>
+    <li class="nav-item">
+			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+			<i class="fas fa-clipboard"></i>
+			<span>Laporan</span>
+			</a>
+			<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<h6 class="collapse-header">Laporan</h6>
+				<a class="collapse-item" href="<?php echo base_url('report/report_perawatan')?>">Laporan Perawatan</a>
+				<a class="collapse-item" href="<?php echo base_url('report/report_perbaikan')?>">Laporan Perbaikan</a>
+        <a class="collapse-item" href="<?php echo base_url('report/report_telat')?>">Laporan Keterlambatan</a> -->
+        <!--<a class="collapse-item" href="<?php //echo base_url('report/report_sparepart')?>">Laporan Sparepart</a>-->
+			<!-- </div>
+			</div>
+    </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <!-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button> -->
+
+          <!-- Topbar Search -->
+          <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form> -->
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <!-- <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a> -->
+              <!-- Dropdown - Messages -->
+              <!-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li> -->
+
+            <!-- Nav Item - Alerts -->
+            <!-- <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i> -->
+                <!-- Counter - Alerts -->
+                <!-- <span class="badge badge-danger badge-counter">3+</span> -->
+              <!-- </a> -->
+              <!-- Dropdown - Alerts -->
+              <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6> -->
+                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 12, 2019</div>
+                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-success">
+                      <i class="fas fa-donate text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 7, 2019</div>
+                    $290.29 has been deposited into your account!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="fas fa-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Spending Alert: We've noticed unusually high spending for your account.
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a> -->
+              <!-- </div>
+            </li> -->
+
+            <!-- Nav Item - Messages -->
+            <!-- <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i> -->
+                <!-- Counter - Messages -->
+                <!-- <span class="badge badge-danger badge-counter">7</span> -->
+              <!-- </a> -->
+              <!-- Dropdown - Messages -->
+              <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown"> -->
+                <!-- <h6 class="dropdown-header">
+                  Message Center
+                </h6> -->
+                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                    <div class="status-indicator"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
+                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                    <div class="status-indicator bg-warning"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
+                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                  </div>
+                </a> -->
+                <!-- <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a> -->
+              <!-- </div>
+            </li> -->
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('nmUser')?></span>
+                <img class="img-profile rounded-circle" src="<?php echo base_url('assets/bootstrap/image/icno.png')?>">
+              </a> 
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <!-- <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a> -->
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Keluar
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title" id="exampleModalLabel">Yakin keluar ?</h6>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Pilih keluar jika sudah yakin</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+          <a class="btn btn-primary" href="<?php echo base_url('Cekses/destroy');?>">Keluar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+
+
+
+
+
+
+
+
+
+
+        <link rel="stylesheet" href="../../../assets/datepicker/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../assets/datepicker/css/ilmudetil.css">
+        <link rel="stylesheet" href="../../../assets/datepicker/css/bootstrap-datetimepicker.css"/>
+        <script src="../../../assets/datepicker/js/moment-with-locales.js"></script>
+        <script src="../../../assets/datepicker/js/jquery-1.11.3.min.js"></script>
+        <script src="../../../assets/datepicker/js/bootstrap.min.js"></script>
+        <script src="../../../assets/datepicker/js/bootstrap-datetimepicker.js"></script>
+
+        <div class="row">
+          <div class="col-12">
+            <!-- Custom Tabs -->
+            <div class="card">
+            <form action="<?php echo base_url().'monitor/create_action';?>" method="post"><!-- /.card-header -->
+                <div class="card-header d-flex p-0">
+                    <h3 class="card-title p-3">Data Order</h3>
+                    <ul class="nav nav-pills ml-auto p-2">
+                      <li class="nav-item"><a class="nav-link" href="#tab_1" data-toggle="tab">Identitas</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab">Order</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#tab_3" data-toggle="tab">Pengiriman</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#tab_4" data-toggle="tab">Jenis Pembayaran</a></li>
+                      <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                          Dropdown <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" tabindex="-1" href="#">Action</a>
+                          <a class="dropdown-item" tabindex="-1" href="#">Another action</a>
+                          <a class="dropdown-item" tabindex="-1" href="#">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" tabindex="-1" href="#">Separated link</a>
+                        </div>
+                      </li> -->
+                    </ul>
+                  </div><!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="tab_1">
+                    <div class="form-group">
+                        <label for="nm_mitra">Nama Mitra </label> <?php echo form_error('nm_mitra')?>
+                        <input class="form-control" type="text" name="nm_mitra" id="nm_mitra" style="width: 80%;" value="Mitra" disabled>
+                    </div>
+                    <!-- <table width='80%'>
+                        <tr>
+                            <td width='10%'>
+                            <div class="form-group">
+                                <label for="tgl_terima">Kota & Tanggal Lahir </label> <?php echo form_error('tgl_lahir') ?>
+                                    <input class="form-control" type="text" name="kt_lahir" id="kt_lahir" placeholder="Kota">
+                                </div>
+                            </td>
+                            <td width='40%'>
+                            <div class="form-group">
+                                <label style="height: 17px;"></label>
+                                <input class="form-control" type="text" name="tgl_lahir" id="tgl_lahir" placeholder="dd-mm-yyyy" >
+                            </div>
+                            </td>
+                        </tr>
+                    
+
+                    </table> -->
+                    <div class="form-group">
+                        <label for="almt_rmh">Alamat Rumah</label> <?php echo form_error('almt_rmh') ?>
+                        <!-- <input class="form-control" type="text" name="almt_rmh" id="almt_rmh" style="width: 80%;"> -->
+                        <select class="form-control" style="width: 80%;">
+                            <option>Rumah</option>
+                            <option>Outlet</option>
+                            <option>Kirim</option>
+                        </select>
+                    </div>
+                    <table width='80%'>
+                        <!-- <tr>
+                            <td width='50%'>
+                                <div class="form-group">
+                                    <label for="provinsi">Provinsi</label>
+                                    <select class="form-control" name="provinsi" id="provinsi" style="width: 100%;">
+                                        <option value="0">Pilih</option>
+                                    <?php
+                                    foreach ($dd_pr as $row) {  
+                                        echo "<option value='".$row->id_provinsi."' >".$row->nama_provinsi."</option>";
+                                        }
+                                        echo"
+                                    </select>"
+                                    ?>
+                                <div>
+                            </td>
+                            <td width='50%'>
+                                <div class="form-group">
+                                    <label for="almt_kt_rmh">Kota</label> <?php echo form_error('almt_kt_rmh') ?>
+                                        <select class="form-control" name="almt_kt_rmh" id="almt_kt_rmh" style="width: 100%;">
+                                            <option value="0">Pilih</option>
+                                        </select>
+                                </div>
+                            </td>
+                        </tr> -->
+                        <tr>
+                            <td width='50%'>
+                                <div class="form-group">
+                                    <label for="no_hp1">Nomor Handphone</label>
+                                    <input class="form-control" name="no_hp1" id="no_hp1" style="width: 100%" value="08754728831" disabled>
+                                </div>
+                            </td>
+                            <td width='50%'>
+                                <div class="form-group">
+                                    <label for="no_hp2">Nomor Handphone</label>
+                                    <input class="form-control" name="no_hp2" id="no_hp2" style="width: 100%" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+                <div class="tab-pane" id="tab_2">
+                    <div class="form-group">
+                        <label for="Barang">Produk</label>
+                        <select class="form-control" name="barang" id="barang" style="width: 80%;" disabled>
+                            <option selected>Tahu Gila</option>
+                            <!-- <option>Keju</option>
+                            <option>Minyak</option>
+                            <option>Ayam</option> -->
+                        </select>
+                        <label for="total">Total Harga</label>
+                        <input type="text" id="tot_harga" name="tot_harga" class="form-control" disabled>
+                        <!-- <br>
+                        <input class="form-control" name="jml_barang" id="jml_barang" type="text" placeholder="Jumlah barang" style="width: 80%">
+                        <br>
+                        <button class="btn btn-primary" type="submit">Tambah</button> -->
+                        <!-- <br>
+                        <input type="radio" name="paketItem" id="paketItem1"> Paket 2 Item
+                        <input type="radio" name="paketItem" id="paketItem2"> Paket 3 Item -->
+                        <br>
+                        <input type="checkbox" name="paketItem" id="paketItem3"> Eceran
+                        <input type="checkbox" name="paketItem" id="paketItem2"> Paket 3 Item
+                        <input type="checkbox" name="paketItem" id="paketItem1"> Paket 2 Item
+                        <script>
+                          $(document).ready(function(){
+                              $('#paketItem1').on('click', function(){
+                                  if($('#paketItem1').is(':checked')){
+                                      $('#paket2').show();
+                                  }else{
+                                    $('#paket2').hide();
+                                      document.getElementById('tot_harga').value = '';
+                                  }
+                              })
+                          })
+                          $(document).ready(function(){
+                              $('#paketItem2').on('click', function(){
+                                  if($('#paketItem2').is(':checked')){
+                                      $('#paket3').show();
+                                  }else{
+                                    $('#paket3').hide();
+                                    document.getElementById('tot_harga').value = '';
+                                  }
+                              })
+                          })
+                          $(document).ready(function(){
+                              $('#paketItem3').on('click', function(){
+                                  if($('#paketItem3').is(':checked')){
+                                      $('#paketecer').show();
+                                  }else{
+                                      $('#paketecer').hide();
+                                  }
+                              })
+                          })
+                        </script>
+                    </div>
+                    <div id="paketecer" style="display: none;">
+                      <div class="form-group">
+                        <label for="a_barang">Barang</label>
+                        <select class="form-control" id="a_barang" name="a_barang">
+                          <option>Tepung</option>
+                          <option>Asin</option>
+                          <option>Paperbag</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="jml_barang">Jumlah Barang</label>
+                        <input type="text" class="form-control" id="jml_barang" name="jml_barang">
+                      </div>
+                      <div class="form-group">
+                        <label for="harga_barang">Harga Barang</label>
+                        <input type="text" class="form-control" id="harga_barang" name="harga_barang">
+                      </div>
+                    </div>
+
+                    <div id="paket3" style="display: none;">
+                    <div class="form-group">
+                      <label for="paketPorsi">Jumlah Porsi</label>
+                      <input class="form-control" type="number" name="paketPorsi" id="paketPorsi" style="width: 80%;">
+                    </div>
+                      <table class="table table-bordered" id="tablePaket3">
+                        <tr>
+                          <th colspan="2" width=30%>Bahan Baku</th>
+                          <th colspan="2" width=30%>Bumbu</th>
+                          <th colspan="2" width=30%>Kemasan</th>
+                        </tr>
+                        <tr>
+                          <td width=20%>Tepung</td>
+                          <td><input class="form-control" type="number" name="jmltpng" id="jmltpng" step="any">kg</td>
+                          <td width=20%>Asin</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlasin" id="jmlasin"></td>
+                          <td width=20%>Paperbag</td>
+                          <td><input class="form-control kemCal" type="number" name="jmlpaperbag" id="jmlpaperbag"></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Cabe Lev 1</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlcabe1" id="jmlcabe1"></td>
+                          <td width=20%>Box</td>
+                          <td><input class="form-control kemCal" type="number" name="jmlbox" id="jmlbox"></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Cabe Lev 2</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlcabe2" id="jmlcabe2"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Cabe Lev 3</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlcabe3" id="jmlcabe3"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>BBQ</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlbbq" id="jmlbbq"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Balado</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlbalado" id="jmlbalado"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Keju</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlkeju" id="jmlkeju"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Pizza</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlpizza" id="jmlpizza"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Jagung Bakar</td>
+                          <td><input class="form-control txtCal" type="number" name="jmljbakar" id="jmljbakar"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Ayam Bawang Pedas</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlabp" id="jmlabp"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Sapi Panggang</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlsp" id="jmlsp"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Kari Ayam</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlka" id="jmlka"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Rumput Laut</td>
+                          <td><input class="form-control txtCal" type="number" name="jmlrl" id="jmlrl"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Jagung Manis</td>
+                          <td><input class="form-control txtCal" type="number" name="jmljm" id="jmljm"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%></td>
+                          <td></td>
+                          <td width=20%>Lada Hitam</td>
+                          <td><input class="form-control txtCal" type="number" name="jmllh" id="jmllh"></td>
+                          <td width=20%></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td width=20%>Total</td>
+                          <td><input class="form-control" type="number" name="jmlbb" id="jmlbb" >kg</td>
+                          <td width=20%>Total</td>
+                          <td><input class="form-control" type="number" name="jmlbumbu" id="jmlbumbu" >porsi</td>
+                          <td width=20%>Total</td>
+                          <td><input class="form-control" type="number" name="jmlkemasan" id="jmlkemasan" >pcs</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <script>
+                      var tpng = 0.04;
+                      var hitung = 0;
+                      var jmlporsi = document.getElementById('paketPorsi');
+                      jmlporsi.addEventListener('keyup', function(e){
+                        var tot = parseInt(document.getElementById('paketPorsi').value) * 1900;
+                        document.getElementById('tot_harga').value = number_format(tot,2,',','.');
+                        
+                        document.getElementById("jmlbumbu").max = jmlporsi.value;
+                        document.getElementById("jmlkemasan").max = jmlporsi.value;
+                        hitung = parseInt(jmlporsi.value) * tpng;
+                        document.getElementById("jmltpng").value = hitung;
+                        document.getElementById("jmlbb").value = hitung;
+                      })
+
+                      $(document).ready(function(){
+                      $("#tablePaket3").on('input', '.txtCal', function () {
+                            var calculated_total_sum = 0;
+                          
+                            $("#tablePaket3 .txtCal").each(function () {
+                                var get_textbox_value = $(this).val();
+                                if ($.isNumeric(get_textbox_value)) {
+                                    calculated_total_sum += parseFloat(get_textbox_value);
+                                    }                  
+                                  });
+                                    $("#jmlbumbu").val(calculated_total_sum);
+                            });
+
+                      });
+                      $(document).ready(function(){
+                      $("#tablePaket3").on('input', '.kemCal', function () {
+                            var calculated_total_sum = 0;
+                          
+                            $("#tablePaket3 .kemCal").each(function () {
+                                var get_textbox_value = $(this).val();
+                                if ($.isNumeric(get_textbox_value)) {
+                                    calculated_total_sum += parseFloat(get_textbox_value);
+                                    }                  
+                                  });
+                                    $("#jmlkemasan").val(calculated_total_sum);
+                            });
+
+                      });
+                    </script>
+
+                    <div id="paket2" style="display: none;">
+                      <div class="form-group">
+                        <label for="paketPorsi">Jumlah Porsi</label>
+                        <input class="form-control" type="number" name="paketPorsi" id="paketPorsi2" style="width: 80%;">
+                      </div>
+                      <table class="table table-bordered" id="tablePaket2">
+                        <tr>
+                          <td align="center"><input type="checkbox" name="bbdanb" id="bbdanb"> Bahan & Bumbu</td>
+                          <td align="center"><input type="checkbox" name="kdanb" id="kdanb"> Kemasan & Bumbu</td>
+                          <td align="center"><input type="checkbox" name="bbdank" id="bbdank"> Bahan & Kemasan</td>
+                          <script>
+                            var jmlporsi2 = document.getElementById('paketPorsi2');
+                            var hitung2 = 0;
+                            jmlporsi2.addEventListener('keyup', function(e){
+                              var tot2 = parseInt(document.getElementById('paketPorsi2').value) * 1500;
+                              // var a = number_format(tot2,2,',','.');
+                              document.getElementById('tot_harga').value = tot2;
+
+                              document.getElementById("jmlbumbu21").max = jmlporsi2.value;
+                              document.getElementById("jmlbumbu22").max = jmlporsi2.value;
+                              document.getElementById("jmlkemasan22").max = jmlporsi2.value;
+                              document.getElementById("jmlkemasan23").max = jmlporsi2.value;
+                              hitung2 = parseInt(jmlporsi2.value) * tpng;
+                              document.getElementById("jmlhtpng21").value = hitung2;
+                              document.getElementById("jmlhtpng23").value = hitung2;
+                              document.getElementById("jmlbb21").value = hitung2;
+                              document.getElementById("jmlbb23").value = hitung2;
+                            })
+                          </script>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div id="bahandanbumbu" style="display: none;">
+                            <table class="table table-bordered" id="tablePaket21">
+                              <tr>
+                                <th colspan="2">Bahan</th>
+                                <th colspan="2">Bumbu</th>
+                              </tr>
+                              <tr>
+                                <td width=20%>Tepung</td>
+                                <td><input class="form-control" type="number" name="jmltpng21" id="jmlhtpng21" step="any">kg</td>
+                                <td width=20%>Asin</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlasin21" id="jmlasin21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Cabe Lev 1</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlcabe121" id="jmlcabe121"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Cabe Lev 2</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlcabe221" id="jmlcabe221"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Cabe Lev 3</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlcabe321" id="jmlcabe321"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>BBQ</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlbbq21" id="jmlbbq21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Balado</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlbalado21" id="jmlbalado21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Keju</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlkeju21" id="jmlkeju21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Pizza</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlpizza21" id="jmlpizza21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Jagung Bakar</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmljbakar21" id="jmljbakar21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Ayam Bawang Pedas</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlabp21" id="jmlabp21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Sapi Panggang</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlsp21" id="jmlsp21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Kari Ayam</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlka21" id="jmlka21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Rumput Laut</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmlrl21" id="jmlrl21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Jagung Manis</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmljm21" id="jmljm21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Lada Hitam</td>
+                                <td><input class="form-control 21Cal" type="number" name="jmllh21" id="jmllh21"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%>Total</td>
+                                <td><input class="form-control" type="number" name="jmlbb21" id="jmlbb21">kg</td>
+                                <td width=20%>Total</td>
+                                <td><input class="form-control" type="number" name="jmlbumbu21" id="jmlbumbu21">porsi</td>
+                              </tr>
+                            </table>
+                          </div>
+                          <script>
+                            $(document).ready(function(){
+                              $("#tablePaket21").on('input', '.21Cal', function () {
+                                    var calculated_total_sum = 0;
+                                  
+                                    $("#tablePaket21 .21Cal").each(function () {
+                                        var get_textbox_value = $(this).val();
+                                        if ($.isNumeric(get_textbox_value)) {
+                                            calculated_total_sum += parseFloat(get_textbox_value);
+                                            }                  
+                                          });
+                                            $("#jmlbumbu21").val(calculated_total_sum);
+                                    });
+
+                              });
+                            
+                          </script>
+                          </td>
+                          <td>
+                            <div id="kemasandanbumbu" style="display: none;">
+                            <table class="table table-bordered" id="tablePaket22">
+                              <tr>
+                                <th colspan="2">Kemasan</th>
+                                <th colspan="2">Bumbu</th>
+                              </tr>
+                              <tr>
+                                <td width=20%>Paperbag</td>
+                                <td><input class="form-control 22Kem" type="number" name="jmlpaperbag22" id="jmlpaperbag22"></td>
+                                <td width=20%>Asin</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlasin22" id="jmlasin22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%>Box</td>
+                                <td><input class="form-control 22Kem" type="number" name="jmlbox22" id="jmlbox22"></td>
+                                <td width=20%>Cabe Lev 1</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlcabe122" id="jmlcabe122"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Cabe Lev 2</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlcabe222" id="jmlcabe222"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Cabe Lev 3</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlcabe322" id="jmlcabe322"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>BBQ</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlbbq22" id="jmlbbq22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Balado</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlbalado22" id="jmlbalado22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Keju</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlkeju22" id="jmlkeju22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Pizza</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlpizza22" id="jmlpizza22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Jagung Bakar</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmljbakar22" id="jmljbakar22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Ayam Bawang Pedas</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlabp22" id="jmlabp22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Sapi Panggang</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlsp22" id="jmlsp22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Kari Ayam</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlka22" id="jmlka22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Rumput Laut</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmlrl22" id="jmlrl22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Jagung Manis</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmljm22" id="jmljm22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Lada Hitam</td>
+                                <td><input class="form-control 22Cal" type="number" name="jmllh22" id="jmllh22"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%>Total</td>
+                                <td><input class="form-control" type="number" name="jmlkemasan22" id="jmlkemasan22">pcs</td>
+                                <td width=20%>Total</td>
+                                <td><input class="form-control" type="number" name="jmlbumbu22" id="jmlbumbu22">porsi</td>
+                              </tr>
+                            </table>
+                          </div>
+                          <script>
+                            $(document).ready(function(){
+                            $("#tablePaket22").on('input', '.22Cal', function () {
+                                  var calculated_total_sum = 0;
+                                
+                                  $("#tablePaket22 .22Cal").each(function () {
+                                      var get_textbox_value = $(this).val();
+                                      if ($.isNumeric(get_textbox_value)) {
+                                          calculated_total_sum += parseFloat(get_textbox_value);
+                                          }                  
+                                        });
+                                          $("#jmlbumbu22").val(calculated_total_sum);
+                                  });
+
+                            });
+                            $(document).ready(function(){
+                            $("#tablePaket22").on('input', '.22Kem', function () {
+                                  var calculated_total_sum = 0;
+                                
+                                  $("#tablePaket22 .22Kem").each(function () {
+                                      var get_textbox_value = $(this).val();
+                                      if ($.isNumeric(get_textbox_value)) {
+                                          calculated_total_sum += parseFloat(get_textbox_value);
+                                          }                  
+                                        });
+                                          $("#jmlkemasan22").val(calculated_total_sum);
+                                  });
+
+                            });
+
+                          </script>
+                          </td>
+                          <td>
+                            <div id="bahandankemasan" style="display: none;">
+                            <table class="table table-bordered" id="tablePaket23">
+                              <tr>
+                                <th colspan="2">Bahan</th>
+                                <th colspan="2">Kemasan</th>
+                              </tr>
+                              <tr>
+                                <td width=20%>Tepung</td>
+                                <td><input class="form-control" type="number" name="jmltpng23" id="jmlhtpng23" step="any">kg</td>
+                                <td width=20%>Paperbag</td>
+                                <td><input class="form-control 23Kem" type="number" name="jmlpaperbag23" id="jmlpaperbag23"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%></td>
+                                <td></td>
+                                <td width=20%>Box</td>
+                                <td><input class="form-control 23Kem" type="number" name="jmlbox23" id="jmlbox23"></td>
+                              </tr>
+                              <tr>
+                                <td width=20%>Total</td>
+                                <td><input class="form-control" type="number" name="jmlbb23" id="jmlbb23" step="any">kg</td>
+                                <td width=20%>Total</td>
+                                <td><input class="form-control" type="number" name="jmlkemasan23" id="jmlkemasan23">pcs</td>
+                              </tr>
+                            </table>
+                          </div>
+                          <script>
+                            $(document).ready(function(){
+                              $("#tablePaket23").on('input', '.23Kem', function () {
+                                    var calculated_total_sum = 0;
+                                  
+                                    $("#tablePaket23 .23Kem").each(function () {
+                                        var get_textbox_value = $(this).val();
+                                        if ($.isNumeric(get_textbox_value)) {
+                                            calculated_total_sum += parseFloat(get_textbox_value);
+                                            }                  
+                                          });
+                                            $("#jmlkemasan23").val(calculated_total_sum);
+                                    });
+
+                              });
+                          </script>
+                          </td>
+                          
+                        </tr>
+                      </table>
+                    </div>
+                    <script>
+                      $(document).ready(function(){
+                              $('#bbdanb').on('click', function(){
+                                  if($('#bbdanb').is(':checked')){
+                                      $('#bahandanbumbu').show();
+                                  }else{
+                                    $('#bahandanbumbu').hide();
+                                  }
+                              })
+                          })
+                      $(document).ready(function(){
+                              $('#kdanb').on('click', function(){
+                                  if($('#kdanb').is(':checked')){
+                                      $('#kemasandanbumbu').show();
+                                  }else{
+                                    $('#kemasandanbumbu').hide();
+                                  }
+                              })
+                          })
+                      $(document).ready(function(){
+                              $('#bbdank').on('click', function(){
+                                  if($('#bbdank').is(':checked')){
+                                      $('#bahandankemasan').show();
+                                  }else{
+                                    $('#bahandankemasan').hide();
+                                  }
+                              })
+                          })
+                    </script>
+                    
+                </div>
+                <!-- /.tab-pane -->
+                <div class="tab-pane" id="tab_3">
+                    <div class="form-group">
+                            <label for="almt_kirim">Alamat Kirim</label> 
+                            <input class="form-control" type="text" name="almt_kirim" id="almt_kirim" style="width: 80%;">
+                    </div>
+                    <table width='80%'>
+                        <tr>
+                            <td width='50%'>
+                                <div class="form-group">
+                                    <label for="provinsi">Provinsi</label>
+                                    <select class="form-control" name="provinsi" id="provinsi2" style="width: 100%;">
+                                        <option value="0">Pilih</option>
+                                    <!-- <?php
+                                    foreach ($dd_pr as $row) {  
+                                        echo "<option value='".$row->id_provinsi."' >".$row->nama_provinsi."</option>";
+                                        }
+                                        echo" -->
+                                    </select>
+                                    <!-- " -->
+                                    <!-- ?> -->
+                                </div>
+                            </td>
+                            <td width='50%'>                               
+                                <div class="form-group">
+                                    <label for="almt_kt_rmh">Kota</label>
+                                    <select class="form-control" name="almt_kt_outlet" id="almt_kt_outlet">
+                                        <option value="0">Pilih</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="form-group">
+                        <input type="radio" name="cek" id="cek1" value="1"> Seperti Alamat Rumah
+                        &nbsp&nbsp
+                        <input type="radio" name="cek" id="cek2" value="2"> Seperti Alamat Outlet
+                    </div>
+                </div>
+                <!-- /.tab-pane -->
+                <div class="tab-pane" id="tab_4">
+                    <div class="form-group">
+                        <label for="pembayaran">Pembayaran</label><br>
+                        <input type="radio" name="sts_pmby" id="sts_pmby1"> DP
+                        <input type="radio" name="sts_pmby" id="sts_pmby2"> Lunas
+                    </div>
+                    <div class="form-group">
+                        <label for="paket">Paket</label> <?php echo form_error('paket') ?>
+                        <select class="form-control" name="paket" id="paket" style="width: 80%">
+                            <option value="0">Pilih</option>
+                        <?php
+                        foreach ($dd_pk as $row) {  
+                            echo "<option value='".$row->kd_paket."' >".$row->nm_paket."</option>";
+                            }
+                            echo"
+                        </select>
+                        <!-- "
+                    ?> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="jml_tarif">Jumlah Transfer</label>
+                        <input class="form-control" type="text" name="jml_tarif" id="jml_tarif" style="width: 80%;">
+                    </div>
+                    <table width='80%'>
+                        <tr>
+                            <td width='20%'>
+                                <div class="form-group">
+                                    <label for="rekening">Bank</label>
+                                    <select class="form-control" name="nm_bank" id="nm_bank" style="width: 100%;">
+                                        <option>BNI</option>
+                                        <option>BRI</option>
+                                        <option>BCA</option>
+                                        <option>Mandiri</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td width='80%'>
+                                <div class="form-group">
+                                    <label for="no_rekening">Nomor Rekening</label>
+                                    <input class="form-control" type="text" name="rekening" id="rekening" style="width: 100%">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="ats_nm_rekening" id="ats_nm_rekening" placeholder="Atas Nama" style="width: 80%;">
+                    </div>
+                    <table width="80%">
+                        <tr>
+                            <td width='50%'>
+                                <div class="form-group">
+                                    <label for="ekspedisi">Ekspedisi</label>
+                                    <select class="form-control" name="ekspedisi" style="width: 100%;">
+                                        <option value="0">Pilih</option>
+                                    <?php
+                                    foreach ($dd_ek as $row) {  
+                                        echo "<option value='".$row->kd_ekspedisi."' >".$row->nama_ekspedisi."</option>";
+                                        }
+                                        echo"
+                                    </select>
+                                    <!-- "
+                                ?> -->
+                                </div>
+                            </td>
+                            <td width='50%'>             
+                                <div class="form-group">
+                                    <label for="biaya_kirim">Biaya Kirim</label>
+                                    <input class="form-control" type="text" name="biaya_kirim" id="biaya_kirim" style="width: 100%;">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="submit" class="btn btn-success">Simpan</button>
+                    <a href="<?php echo site_url('monitor') ?>" class="btn btn-danger">Batal</a>
+                  
+                <!-- /.tab-content -->
+              </div><!-- /.card-body -->
+            </div>
+            </form>
+            <!-- ./card -->
+          </div>
+          <!-- /.col -->
+        </div>
+
+        <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Adilaya 2020</span>
+          </div>
+        </div>
+      </footer>
+	  <!-- End of Footer -->
+		</div>
+      </div>
+      
+        
+        <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js')?>"></script>
+        
+        <script src="<?php echo base_url('assets/js/jquery-ui.js')?>"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="<?php echo base_url('assets/js/sb-admin-2.min.js')?>"></script>
+        <script>
+	  $('#tgl_lahir').datetimepicker({
+		locale: 'id',
+		format: 'DD-MM-YYYY'
+	});
+
+            $(document).ready(function(){
+        $('#provinsi').change(function(){
+            var id=$(this).val();
+            $.ajax({
+                url : "<?php echo base_url();?>monitor/get_kota",
+                method : "POST",
+                data : {id: id},
+                async : false,
+                dataType : 'json',
+                success: function(data){
+                    var html = '';
+                    var i;
+                    for(i=0; i<data.length; i++){
+                        html += '<option value="'+data[i].id_kota+'">'+data[i].nama_kota+'</option>';
+                    }
+                    $('#almt_kt_rmh').html(html);
+                     
+                }
+            });
+        });
+    });
+            $(document).ready(function(){
+        $('#provinsi2').change(function(){
+            var id=$(this).val();
+            $.ajax({
+                url : "<?php echo base_url();?>monitor/get_kota",
+                method : "POST",
+                data : {id: id},
+                async : false,
+                dataType : 'json',
+                success: function(data){
+                    var html = '';
+                    var i;
+                    for(i=0; i<data.length; i++){
+                        html += '<option value="'+data[i].id_kota+'">'+data[i].nama_kota+'</option>';
+                    }
+                    $('#almt_kt_outlet').html(html);
+                     
+                }
+            });
+        });
+    });
+
+    var rupiah = document.getElementById('jml_tarif');
+    rupiah.addEventListener('keyup', function(e){
+        rupiah.value = formatRupiah(this.value, 'Rp ');
+    });
+
+    function formatRupiah(angka, prefix){
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+        split = number_string.split(','),
+        sisa = split[0].length % 3,
+        rupiah = split[0].substr(0, sisa),
+        ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+        if(ribuan){
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+
+        rupiah = split[1] != undefined ? rupiah + '.' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? 'Rp ' + rupiah :'');
+    }
+
+
+
+    var kirim = document.getElementById('biaya_kirim');
+    kirim.addEventListener('keyup', function(e){
+        kirim.value = formatRupiahKirim(this.value, 'Rp ');
+    });
+
+    function formatRupiahKirim(angka, prefix){
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+        split = number_string.split(','),
+        sisa = split[0].length % 3,
+        kirim = split[0].substr(0, sisa),
+        ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+        if(ribuan){
+            separator = sisa ? '.' : '';
+            kirim += separator + ribuan.join('.');
+        }
+
+        kirim = split[1] != undefined ? kirim + '.' + split[1] : kirim;
+        return prefix == undefined ? kirim : (kirim ? 'Rp ' + kirim :'');
+    }
+    //kirim
+    $(document).ready(function(){
+        $('#cek1').change(
+            function(){
+                if($(this).is(':checked')){
+                    var almt = document.getElementById('almt_rmh').value;
+                    document.getElementById('almt_kirim').value = almt;
+                    document.getElementById('almt_kirim').disabled  = true;
+                }
+            }
+        )
+    })
+    //kirim
+    $(document).ready(function(){
+        $('#cek2').change(
+            function(){
+                if($(this).is(':checked')){
+                    var almt = document.getElementById('almt_outlet').value;
+                    document.getElementById('almt_kirim').value = almt;
+                    document.getElementById('almt_kirim').disabled  = true;
+                }
+            }
+        )
+    })
+    //outlet
+    $(document).ready(function(){
+        $('#cek3').change(
+            function(){
+                if($(this).is(':checked')){
+                    var almt = document.getElementById('almt_rmh').value;
+                    document.getElementById('almt_outlet').value = almt;
+                    document.getElementById('almt_outlet').disabled = true;
+                }
+            }
+        )
+    })
+        </script>
+        </body>
+</html>
